@@ -1668,6 +1668,63 @@ overflow: hidden;
     }
 
 }
+/* =========================================================
+   ANIMASI TULISAN MUNCUL
+========================================================= */
+
+/* Keyframe untuk efek fade in dan naik dari bawah */
+@keyframes munculKeAtas {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Berikan animasi ke semua elemen teks di dalam halaman yang aktif */
+.halaman.aktif .content > *,
+.halaman.aktif .cover-content > *,
+.halaman.aktif .acara-card,
+.halaman.aktif .countdown-box {
+    animation: munculKeAtas 0.8s ease-out forwards;
+    opacity: 0; /* Mulai dari transparan sebelum animasi berjalan */
+}
+
+/* 
+   Efek Staggered (Muncul bergantian secara berurutan)
+*/
+.halaman.aktif .content > *:nth-child(1),
+.halaman.aktif .cover-content > *:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.halaman.aktif .content > *:nth-child(2),
+.halaman.aktif .cover-content > *:nth-child(2) {
+    animation-delay: 0.35s;
+}
+
+.halaman.aktif .content > *:nth-child(3),
+.halaman.aktif .cover-content > *:nth-child(3) {
+    animation-delay: 0.55s;
+}
+
+.halaman.aktif .content > *:nth-child(4),
+.halaman.aktif .cover-content > *:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+.halaman.aktif .content > *:nth-child(5),
+.halaman.aktif .cover-content > *:nth-child(5) {
+    animation-delay: 0.95s;
+}
+
+.halaman.aktif .content > *:nth-child(6),
+.halaman.aktif .cover-content > *:nth-child(6) {
+    animation-delay: 1.15s;
+}
 
    </style>
 
